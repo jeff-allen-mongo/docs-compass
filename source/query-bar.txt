@@ -70,7 +70,7 @@ query filter. If you click the :guilabel:`Options` to expand the query
 bar, you also have access to the ``project`` and ``limit`` options of
 the query.
 
-Click :guilabel:`Analyze` to execute the filter and view the schema.
+Click :guilabel:`Analyze` to execute the query and view the schema.
 
 .. list-table::
    :widths: 15 85
@@ -96,8 +96,6 @@ Explain Plan Tab
 
 From the query bar in the :guilabel:`Explain Plans` tab, you can
 specify a query filter:
-
-Click :guilabel:`Explain` to view the results of the plan.
 
 .. list-table::
    :widths: 20 80
