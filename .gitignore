@@ -18,3 +18,8 @@ giza.log
 /source/plugins/example-ssh-tunnel-status/
 /source/plugins/example-server-version/
 /backups/
+/screenshot-tool/node_modules
+/screenshot-tool/src/app/compiled-less/
+/screenshot-tool/.compiled-sources
+/screenshot-tool/compass-screenshots-temp/
+/screenshot-tool/src/internal-plugins/

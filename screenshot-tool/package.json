@@ -1,0 +1,344 @@
+{
+  "name": "mongodb-compass",
+  "productName": "MongoDB Compass",
+  "description": "The MongoDB GUI",
+  "homepage": "https://compass.mongodb.com",
+  "version": "1.13.0-dev",
+  "apiVersion": "1.0.0",
+  "main": "src/main.js",
+  "author": {
+    "name": "MongoDB Inc",
+    "email": "compass@mongodb.com"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "config": {
+    "hadron": {
+      "endpoint": "https://compass.mongodb.com",
+      "protocols": [
+        {
+          "name": "MongoDB Protocol",
+          "schemes": [
+            "mongodb"
+          ]
+        },
+        {
+          "name": "MongoDB Compass Protocol",
+          "schemes": [
+            "compass"
+          ]
+        }
+      ],
+      "distributions": {
+        "plugin-prefix": "@mongodb-js/compass",
+        "default": "compass",
+        "compass": {
+          "name": "mongodb-compass",
+          "productName": "MongoDB Compass",
+          "bundleId": "com.mongodb.compass",
+          "plugins-directory": ".mongodb/compass/plugins",
+          "plugins": [
+            "node_modules/@mongodb-js/compass-crud",
+            "node_modules/@mongodb-js/compass-collection-stats",
+            "node_modules/@mongodb-js/compass-connect",
+            "node_modules/@mongodb-js/compass-auth-kerberos",
+            "node_modules/@mongodb-js/compass-auth-ldap",
+            "node_modules/@mongodb-js/compass-auth-x509",
+            "node_modules/@mongodb-js/compass-document-validation",
+            "node_modules/@mongodb-js/compass-deployment-awareness",
+            "node_modules/@mongodb-js/compass-query-history",
+            "node_modules/@mongodb-js/compass-security",
+            "node_modules/@mongodb-js/compass-instance",
+            "node_modules/@mongodb-js/compass-serverstats",
+            "node_modules/@mongodb-js/compass-server-version",
+            "node_modules/@mongodb-js/compass-ssh-tunnel-status",
+            "node_modules/@mongodb-js/compass-status"
+          ],
+          "styles": [
+            "index"
+          ]
+        },
+        "compass-community": {
+          "name": "mongodb-compass-community",
+          "productName": "MongoDB Compass Community",
+          "bundleId": "com.mongodb.compass-community",
+          "plugins-directory": ".mongodb/compass-community/plugins",
+          "plugins": [
+            "node_modules/@mongodb-js/compass-collection-stats",
+            "node_modules/@mongodb-js/compass-connect",
+            "node_modules/@mongodb-js/compass-crud",
+            "node_modules/@mongodb-js/compass-deployment-awareness",
+            "node_modules/@mongodb-js/compass-license",
+            "node_modules/@mongodb-js/compass-query-history",
+            "node_modules/@mongodb-js/compass-security",
+            "node_modules/@mongodb-js/compass-instance",
+            "node_modules/@mongodb-js/compass-server-version",
+            "node_modules/@mongodb-js/compass-ssh-tunnel-status",
+            "node_modules/@mongodb-js/compass-status"
+          ],
+          "styles": [
+            "index"
+          ]
+        },
+        "compass-readonly": {
+          "name": "mongodb-compass-readonly",
+          "productName": "MongoDB Compass Readonly",
+          "bundleId": "com.mongodb.compass.readonly",
+          "plugins-directory": ".mongodb/compass-readonly/plugins",
+          "readonly": true,
+          "plugins": [
+            "node_modules/@mongodb-js/compass-crud",
+            "node_modules/@mongodb-js/compass-collection-stats",
+            "node_modules/@mongodb-js/compass-connect",
+            "node_modules/@mongodb-js/compass-auth-kerberos",
+            "node_modules/@mongodb-js/compass-auth-ldap",
+            "node_modules/@mongodb-js/compass-auth-x509",
+            "node_modules/@mongodb-js/compass-document-validation",
+            "node_modules/@mongodb-js/compass-deployment-awareness",
+            "node_modules/@mongodb-js/compass-query-history",
+            "node_modules/@mongodb-js/compass-security",
+            "node_modules/@mongodb-js/compass-instance",
+            "node_modules/@mongodb-js/compass-serverstats",
+            "node_modules/@mongodb-js/compass-server-version",
+            "node_modules/@mongodb-js/compass-ssh-tunnel-status",
+            "node_modules/@mongodb-js/compass-status"
+          ],
+          "styles": [
+            "index"
+          ]
+        },
+        "compass-lockdown": {
+          "name": "mongodb-compass-lockdown",
+          "productName": "MongoDB Compass Lockdown",
+          "bundleId": "com.mongodb.compass.lockdown",
+          "plugins-directory": ".mongodb/compass-lockdown/plugins",
+          "lockdown": true,
+          "plugins": [
+            "node_modules/@mongodb-js/compass-crud",
+            "node_modules/@mongodb-js/compass-collection-stats",
+            "node_modules/@mongodb-js/compass-connect",
+            "node_modules/@mongodb-js/compass-auth-kerberos",
+            "node_modules/@mongodb-js/compass-auth-ldap",
+            "node_modules/@mongodb-js/compass-auth-x509",
+            "node_modules/@mongodb-js/compass-document-validation",
+            "node_modules/@mongodb-js/compass-deployment-awareness",
+            "node_modules/@mongodb-js/compass-query-history",
+            "node_modules/@mongodb-js/compass-security",
+            "node_modules/@mongodb-js/compass-instance",
+            "node_modules/@mongodb-js/compass-serverstats",
+            "node_modules/@mongodb-js/compass-server-version",
+            "node_modules/@mongodb-js/compass-ssh-tunnel-status",
+            "node_modules/@mongodb-js/compass-status"
+          ],
+          "styles": [
+            "index"
+          ]
+        }
+      },
+      "build": {
+        "win32": {
+          "icon": "src/app/images/win32/mongodb-compass.ico",
+          "favicon_url": "https://compass.mongodb.com/favicon.ico",
+          "loading_gif": "src/app/images/win32/mongodb-compass-installer-loading.gif"
+        },
+        "darwin": {
+          "icon": "src/app/images/darwin/mongodb-compass.icns",
+          "dmg_background": "src/app/images/darwin/background.png",
+          "codesign_identity": "Developer ID Application: Matt Kangas (ZD3CL9MT3L)",
+          "codesign_sha1": "90E39AA7832E95369F0FC6DAF823A04DFBD9CF7A",
+          "app_category_type": "public.app-category.productivity"
+        },
+        "linux": {
+          "icon": "src/app/images/linux/mongodb-compass.png",
+          "deb_section": "Databases",
+          "rpm_categories": [
+            "Office",
+            "Database",
+            "Building",
+            "Debugger",
+            "IDE",
+            "GUIDesigner",
+            "Profiling"
+          ]
+        }
+      }
+    }
+  },
+  "dependency-check": {
+    "entries": [
+      "./src/main/index.js",
+      "./src/app/index.js"
+    ],
+    "ignore": [
+      "electron",
+      "marked"
+    ]
+  },
+  "scripts": {
+    "start": "hadron-build develop",
+    "pretest": "mongodb-runner install && mongodb-runner start --port 27017",
+    "test": "hadron-build test",
+    "posttest": "mongodb-runner stop --port 27017",
+    "postinstall": "./node_modules/.bin/electron-rebuild",
+    "check": "mongodb-js-precommit './src/**/*{.js,.jsx}' './test/**/*.js'",
+    "ci": "npm run check && npm run test",
+    "clean": "hadron-build clean",
+    "compile-ui": "hadron-build ui",
+    "fmt": "mongodb-js-fmt 'src/**/*{.js,.jsx}' 'test/**/*.js'",
+    "release": "hadron-build release",
+    "test-unit": "npm test -- --unit",
+    "test-enzyme": "npm test -- --enzyme",
+    "test-packages": "npm test -- --packages",
+    "test-main": "npm test -- --main",
+    "test-renderer": "npm test -- --renderer",
+    "test-functional": "npm test -- --functional",
+    "test-release": "npm test -- --release",
+    "upload": "hadron-build upload",
+    "evergreen-expansions": "hadron-build info --format=yaml --flatten > expansions.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/10gen/compass.git"
+  },
+  "dependencies": {
+    "@mongodb-js/compass-auth-kerberos": "^0.1.0",
+    "@mongodb-js/compass-auth-ldap": "^0.1.0",
+    "@mongodb-js/compass-auth-x509": "^0.1.0",
+    "@mongodb-js/compass-collection-stats": "^2.0.1",
+    "@mongodb-js/compass-connect": "^2.0.1",
+    "@mongodb-js/compass-crud": "^3.0.0",
+    "@mongodb-js/compass-deployment-awareness": "^5.1.0",
+    "@mongodb-js/compass-document-validation": "^7.2.0",
+    "@mongodb-js/compass-instance": "0.0.2",
+    "@mongodb-js/compass-license": "^0.1.0",
+    "@mongodb-js/compass-query-history": "^2.2.0",
+    "@mongodb-js/compass-security": "^0.1.0",
+    "@mongodb-js/compass-server-version": "^1.1.0",
+    "@mongodb-js/compass-serverstats": "^11.1.0",
+    "@mongodb-js/compass-ssh-tunnel-status": "^1.1.0",
+    "@mongodb-js/compass-status": "^2.1.0",
+    "ampersand-collection": "^1.5.0",
+    "ampersand-collection-filterable": "^0.2.1",
+    "ampersand-dom-bindings": "^3.7.0",
+    "ampersand-model": "^6.0.2",
+    "ampersand-rest-collection": "^5.0.0",
+    "ampersand-router": "^3.0.2",
+    "ampersand-state": "4.8.2",
+    "ampersand-view": "^9.0.0",
+    "app-migrations": "mongodb-js/app-migrations#v0.1.2",
+    "async": "^1.5.2",
+    "bootstrap": "https://github.com/twbs/bootstrap/archive/v3.3.5.tar.gz",
+    "codemirror-mongodb": "^0.10.2",
+    "d3": "^3.5.6",
+    "d3-flextree": "^1.0.3",
+    "d3-timer": "^1.0.3",
+    "debug": "mongodb-js/debug#v2.2.3",
+    "debug-menu": "^0.3.0",
+    "detect-coordinates": "^0.2.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "font-awesome": "^4.7.0",
+    "get-object-path": "azer/get-object-path#74eb42de0cfd02c14ffdd18552f295aba723d394",
+    "hadron-app": "^2.2.0",
+    "hadron-app-registry": "^7.1.0",
+    "hadron-auto-update-manager": "^2.0.0",
+    "hadron-compile-cache": "^1.0.1",
+    "hadron-document": "^4.0.0",
+    "hadron-ipc": "^0.0.7",
+    "hadron-module-cache": "^0.0.3",
+    "hadron-plugin-manager": "^5.3.0",
+    "hadron-react-bson": "^1.4.0",
+    "hadron-react-buttons": "^1.5.0",
+    "hadron-react-components": "^1.14.1",
+    "hadron-style-manager": "^0.1.0",
+    "highlight.js": "^8.9.1",
+    "jquery": "^2.1.4",
+    "keytar": "mongodb-js/node-keytar#fdef09013f576b7a257ad768939e827882bccef5",
+    "less": "^2.6.1",
+    "less-cache": "^0.23.0",
+    "local-links": "^1.4.0",
+    "lodash": "^3.10.1",
+    "mapbox-gl": "^0.39.1",
+    "marky": "^1.2.0",
+    "moment": "^2.10.6",
+    "mongodb-collection-model": "^1.0.0",
+    "mongodb-connection-model": "^12.0.1",
+    "mongodb-data-service": "^11.0.4",
+    "mongodb-database-model": "^0.1.3",
+    "mongodb-explain-plan-model": "^0.2.2",
+    "mongodb-extended-json": "^1.10.0",
+    "mongodb-index-model": "^2.0.1",
+    "mongodb-instance-model": "^7.0.0",
+    "mongodb-js-metrics": "^3.0.0",
+    "mongodb-language-model": "^1.2.0",
+    "mongodb-ns": "^2.0.0",
+    "mongodb-query-parser": "^1.0.1",
+    "mongodb-schema": "^7.0.0",
+    "mongodb-shell-to-url": "^0.1.0",
+    "ms": "^0.7.1",
+    "node-notifier": "^4.3.1",
+    "node-pre-gyp": "^0.6.38",
+    "numeral": "^1.5.3",
+    "object-diff": "0.0.4",
+    "pluralize": "^1.2.1",
+    "prop-types": "^15.5.8",
+    "qs": "^5.2.0",
+    "raf": "^3.1.0",
+    "react": "^15.5.4",
+    "react-bootstrap": "0.31.0",
+    "react-click-outside": "^2.2.0",
+    "react-codemirror": "durran/react-codemirror#fix-update",
+    "react-dom": "^15.5.4",
+    "react-fontawesome": "^1.6.1",
+    "react-select": "1.0.0-rc.5",
+    "react-tooltip": "^3.2.6",
+    "react-virtualized": "9.18.3",
+    "reflux": "0.4.1",
+    "reflux-state-mixin": "mongodb-js/reflux-state-mixin",
+    "semver": "^5.1.0",
+    "storage-mixin": "^0.8.1",
+    "turf-destination": "^1.2.1",
+    "turf-distance": "^1.1.0",
+    "turf-point": "^2.0.1",
+    "uuid": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-register": "^6.23.0",
+    "chai": "^3.4.1",
+    "chai-as-promised": "^5.1.0",
+    "chai-enzyme": "^0.8.0",
+    "devtron": "^1.4.0",
+    "electron": "1.7.11",
+    "electron-devtools-installer": "^2.1.0",
+    "electron-mocha": "^3.3.0",
+    "electron-rebuild": "^1.6.0",
+    "electron-viewport": "^1.0.1",
+    "enzyme": "^2.5.1",
+    "eslint-config-mongodb-js": "^2.2.0",
+    "hadron-build": "^18.0.0",
+    "hadron-spectron": "^1.0.0",
+    "jquery": "^3.3.1",
+    "jsdom": "^9.8.3",
+    "mgeneratejs": "^0.2.0",
+    "mocha": "^3.1.2",
+    "mock-require": "^2.0.1",
+    "mongodb-js-precommit": "^0.3.0",
+    "mongodb-runner": "^3.6.1",
+    "react-test-renderer": "^15.6.1",
+    "sinon": "^1.17.6",
+    "sinon-chai": "^2.8.0",
+    "xvfb-maybe": "^0.1.3"
+  },
+  "precommit": [
+    "check"
+  ],
+  "engines": {
+    "node": "^7.9.0 || ^8.5.0",
+    "npm": "^4.0.0 || ^5.3.0"
+  },
+  "bugs": {
+    "url": "https://docs.mongodb.com/compass/current/#contact",
+    "email": "compass@mongodb.com"
+  }
+}
