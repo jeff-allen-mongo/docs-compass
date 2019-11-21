@@ -1,8 +1,8 @@
 .. _validation:
 
-==============
-Validation Tab
-==============
+====================================
+Set Validation Rules for Your Schema
+====================================
 
 .. default-domain:: mongodb
 
