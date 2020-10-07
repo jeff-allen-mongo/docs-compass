@@ -40,6 +40,7 @@ specify query options.
 
 .. toctree::
    :titlesonly:
+   :hidden:
 
    /documents/view
    /documents/insert

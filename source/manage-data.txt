@@ -41,6 +41,7 @@ Interact with Your Data
 
 .. toctree::
    :titlesonly:
+   :hidden:
 
    /databases
    /collections

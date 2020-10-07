@@ -167,6 +167,7 @@ suit your needs.
    /connect
    /instance
    /manage-data
+   /embedded-shell
    /aggregation-pipeline-builder
    /import-export
    /troubleshooting
