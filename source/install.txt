@@ -10,8 +10,6 @@ Download and Install Compass
 
 Select your operating system:
 
-.. tabs-pillstrip:: platforms
-
 .. _software-reqs:
 
 Software Requirements
@@ -68,6 +66,7 @@ Download Compass
 To download |compass-short|, you can use your preferred web browser.
 
 .. tabs-platforms::
+   :hidden: true
 
    tabs:
      - id: macos
@@ -95,7 +94,7 @@ To download |compass-short|, you can use your preferred web browser.
        content: |
 
          .. tabs::
-            :hidden:
+            :hidden: true
 
             .. tab:: Debian
                :tabid: debian
@@ -121,6 +120,7 @@ Install Compass
 ---------------
 
 .. tabs-platforms::
+   :hidden: true
 
    tabs:
      - id: macos
@@ -185,7 +185,7 @@ Install Compass
        content: |
 
          .. tabs::
-            :hidden:
+            :hidden: true
 
             .. tab:: Debian
                :tabid: debian
