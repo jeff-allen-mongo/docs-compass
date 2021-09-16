@@ -222,6 +222,12 @@ Select your operating system:
       Install Compass
       ---------------
 
+      Install Using an Installer File (``.msi``)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      Follow these steps to install |compass| using the
+      graphical ``.msi`` installer.
+
       1. Double-click the installer file.
 
       #. Follow the prompts to install |compass-short|. You can
@@ -229,6 +235,45 @@ Select your operating system:
 
       #. Once installed, |compass-short| launches and prompts you to
          configure privacy settings and specify update preferences.
+
+      Install Using the Command Line (``msiexec.exe``)
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+      Follow these steps to install |compass| on Windows in an
+      unattended fashion using ``msiexec.exe`` from the command line.
+      This is useful for system administrators who wish to deploy
+      MongoDB using automation.
+
+      .. important::
+
+         You must open the command interpreter as an
+         **Administrator**.
+
+      From the Command Interpreter, go to the directory containing the
+      ``.msi`` installation binary and run:
+
+      .. code-block:: shell
+
+         msiexec.exe /l*v mdbinstall.log  /qb /i mongodb-compass-{+current-version+}-win32-x64.msi
+         
+      The operation installs |compass| to the default directory:
+      ``C:\Program Files\MongoDB Compass\``
+
+      To specify a different installation location for |compass|, add
+      the ``INSTALLLOCATION`` value:
+
+      .. code-block:: shell
+
+         msiexec.exe /l*v mdbinstall.log  /qb /i mongodb-compass-{+current-version+}-win32-x64.msi ^
+         INSTALLLOCATION="C:\MongoDB\"
+
+
+        
+
+
+
+
+
 
 .. seealso::
 
