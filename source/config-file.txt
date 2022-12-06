@@ -43,18 +43,7 @@ Behavior
 
 When you configure settings with a configuration file:
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-- You can not modify setting set in the configuration file after startup.
-
-- You must create your own configuration file. |compass-short| does not provide 
-  a default configuration file.
-=======
 - You can not modify settings set in the configuration file after startup.
->>>>>>> refs/remotes/jocelyn/DOCSP-25364
-=======
-- You can not modify settings set in the configuration file after startup.
->>>>>>> refs/remotes/upstream/master
 
 - You can specify the configuration file in either EJSON or YAML format.
 
